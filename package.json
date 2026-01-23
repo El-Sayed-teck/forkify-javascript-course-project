@@ -1,0 +1,27 @@
+{
+  "name": "forkify",
+  "version": "1.0.0",
+  "default": "index.html",
+  "browserslist": "> 0.5%, last 2 versions,  > 0.5% and ie >= 11",
+  "scripts": {
+    "start": "parcel --target default index.html",
+    "build": "parcel build index.html --dist-dir ./dist --no-optimize"
+  },
+  "target": {
+    "main": false
+  },
+  "author": "Esraà El Sayed",
+  "license": "ISC",
+  "description": "Recipe application",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.16.3",
+    "parcel": "^2.16.3",
+    "sass": "^1.97.2",
+    "svgo": "^3.0.5"
+  },
+  "dependencies": {
+    "core-js": "^3.47.0",
+    "fracty": "^1.0.12",
+    "regenerator-runtime": "^0.14.1"
+  }
+}
