@@ -203,6 +203,10 @@ const controlAddRecipe = async function (newRecipe) {
   }
 };
 
+const newFeature = function () {
+  console.log('welcome to the application');
+};
+
 const init = function () {
   bookmarksView.addHandlerRender(controlBookmarks);
   recipeView.addHandlerRender(controllRecipes);
@@ -211,6 +215,6 @@ const init = function () {
   searchView.addhandlerSearch(controlSearchResults);
   paginationsView.addHandlerClick(controlPagination);
   addRecipeView.addHandlerUpload(controlAddRecipe);
-  console.log('welcome from git');
+  newFeature();
 };
 init();
