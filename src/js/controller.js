@@ -110,14 +110,8 @@ const controlSearchResults = async function () {
 
 /*let's create a new controller, that will be excuted whenever one of the 2 arrow button is clicked */
 const controlPagination = function (goToPage) {
-  //console.log(goToPage);
-
   // Render NEW results
   resultsView.render(model.getSearchResultsPage(goToPage));
-  /*the method render() will work because it will overwrite the markup that was there previously,
-  because it has the clear(), so before any new HTML is insterted into the page,
-  the parentElements is first cleared/emptied, taht means that render overwrite everything that was there first,
-  and puts the new content in the same place*/
 
   // Render NEW pagination buttons
   paginationsView.render(model.state.search);
@@ -126,12 +120,9 @@ const controlPagination = function (goToPage) {
 /*this function will controllo, la quantita di porzioni, e cambiando la quantita di ingredienti per un tot di porzioni */
 const controlServings = function (newServings) {
   // Update the recipe servings
-  /*updating the erving in the state has ofcourse to do with the model.js */
+
   model.updateServings(newServings);
   // Update the recipeView
-  /*now what we'll do is overwrite the complete recipe,
-  basically we will render it again */
-  //recipeView.render(model.state.recipe);
 
   /* here we want to call the update method, al posto di render menthod,
   this new method will still need al the data like the render method */
@@ -203,10 +194,6 @@ const controlAddRecipe = async function (newRecipe) {
   }
 };
 
-const newFeature = function () {
-  console.log('welcome to the application');
-};
-
 const init = function () {
   bookmarksView.addHandlerRender(controlBookmarks);
   recipeView.addHandlerRender(controllRecipes);
@@ -215,6 +202,5 @@ const init = function () {
   searchView.addhandlerSearch(controlSearchResults);
   paginationsView.addHandlerClick(controlPagination);
   addRecipeView.addHandlerUpload(controlAddRecipe);
-  newFeature();
 };
 init();
