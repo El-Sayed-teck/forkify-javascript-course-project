@@ -184,7 +184,7 @@ export const updateServings = function (newServings) {
     ing.quantity =
       // new quantity = old quantity * newServing / old servings -> example: 2 * 8/4 = 4
       /*so if we double the servings we double then we need to double the quantity*/
-      (ing.quantity * newServings) / state.recipe.servings;
+      ing.quantity = Math.round((((ing.quantity * newServings) / state.recipe.servings) + Number.EPSILON) * 100) / 100;
   });
   /*with this we're changing all the ingredients, 
   and we also need to update the servings in the state,

@@ -12,3 +12,5 @@ My Contributions
 • Implemented full MVC architecture in JavaScript
 • Integrated API calls and state management
 • Deployed the application
+
+This project is for educational and portfolio purposes.
